@@ -1,0 +1,962 @@
+
+body{
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  max-width: 1080px;
+  margin: 0 auto 0 auto;
+}
+
+.logo{
+  width: 200px;
+  height: auto;
+}
+
+/* ヘッダー */
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* PC表示時：スマホ用ナビを非表示 */
+.nav-sp {
+  display: none;
+}
+
+/* ナビゲーションのレイアウト */
+ .nav-pc {
+   font-size: 16px;
+ }
+ 
+ .nav-pc ul {
+   display: flex;
+   padding-left: 0;
+ }
+ 
+ .nav-pc li {
+   list-style: none;
+ }
+ 
+ /* ナビゲーションのリンクの装飾設定 */
+ .nav-pc a {
+   text-decoration: none;
+   margin-left: 20px;
+   color: #0d0d0d;
+ }
+ 
+ .nav-pc a:hover {
+   text-decoration: underline;
+   color: #56B7EC;
+ }
+
+/* メインビジュアル*/
+.main-visual {
+  height: 700px;
+  margin-top: 20px;
+}
+/* メインビジュアル内の画像設定 */
+.main-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 縦横比を崩さず枠いっぱいに綺麗にトリミング表示 */
+  object-position: center; /* 画像の中央を中心に表示 */
+}
+
+/* コンセプト */
+.concept{
+  margin: 100px auto 100px auto;
+}
+
+.concept-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.col-left{
+  width: 50%;
+}
+
+.col-right{
+  width: 50%;
+}
+
+.concept-flex img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tit_01{
+  font-size: 30px;
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+
+.tit_01 span{
+  display: block;
+  font-size: 14px;
+  color: #56B7EC;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.tit{
+  font-size: 28px;
+  text-align: center;
+}
+
+.tex{
+  font-size: 16px;
+}
+
+.col-right .tex{
+  line-height: 1.8;
+}
+
+.btn{
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn a{
+  display: inline-block;
+  width: 280px;
+  padding: 16px 0;
+  background-color: #56B7EC;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 2px;
+  transition: opacity 0.3s;
+}
+
+.btn a:hover{
+  opacity: 0.8;
+}
+/* 院長あいさつセクション全体 */
+.message {
+  margin: 100px auto 100px auto;
+}
+
+.message-block {
+  text-align: center;
+}
+
+/* 院長画像 */
+.message-block img {
+  width: 100%;
+  max-width: 480px; 
+  height: auto;
+  margin: 0 auto 30px auto;
+  display: block;
+}
+
+/* 院長名 */
+.doc_name {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 40px; 
+}
+
+/* あいさつ本文 */
+.message-block .tex {
+  text-align: left; 
+  line-height: 1.8; 
+}
+
+/* 診療内容（SERVICE）セクション */
+.service {
+  margin: 100px auto 100px auto;
+}
+
+/* 左右2列のFlexコンテナ */
+.service-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px; /* 左右のカード間の余白 */
+}
+
+/* 左右の列の幅 */
+.service-left,
+.service-right {
+  width: 50%;
+}
+
+/* 各カードのブロック */
+.service-left_01,
+.service-left_02,
+.service-right_01,
+.service-right_02 {
+  margin-bottom: 50px; /* 上下のカード間の余白 */
+}
+
+/* 診療内容の画像 */
+.service-flex img {
+  width: 100%;
+  height: 400px; /* 画像の高さを統一 */
+  object-fit: cover; /* 画像の縦横比を保ってトリミング */
+  display: block;
+}
+
+/* 診療名（一般歯科、小児歯科など） */
+.tit_02 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0 12px 0;
+}
+
+/* 説明テキスト */
+.service-flex .tex {
+  line-height: 1.7;
+}
+
+/* 予約セクション全体 */
+.appointment {
+  margin: 100px auto 100px auto;
+  text-align: center;
+}
+
+.tel-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.tel-num {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* テーブルスタイル */
+.schedule-table {
+  width: 100%;
+  max-width: 800px; /* テーブルの最大幅 */
+  margin: 0 auto;
+  border-collapse: collapse; /* 枠線の重複を解消 */
+  border: 1px solid #333; /* 外枠線 */
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #333; /* マス目の枠線 */
+  padding: 15px 10px; /* マス内の余白 */
+  text-align: center;
+  font-size: 16px;
+}
+
+.schedule-table th {
+  font-weight: normal;
+}
+
+/* 最終受付の注意書き */
+.table-note {
+  max-width: 800px;
+  margin: 15px auto 0 auto;
+  text-align: left;
+  font-size: 14px;
+}
+
+.table-note span {
+  margin-right: 30px; /* 右側に30pxの余白を作る */
+}
+
+.table-note span:last-child {
+  margin-right: 0; /* 一番右の要素の余白は消す */
+}
+
+/* ブログのセクション */
+.blog{
+  margin: 100px auto 100px auto;
+}
+
+/* 左右2列のFlexコンテナ */
+.blog-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px; /* 左右のカード間の余白 */
+}
+
+/* 左右の列の幅 */
+.blog-flex-left,
+.blog-flex-right {
+  width: 50%;
+}
+
+/* ブログの画像 */
+.blog-flex-right img {
+  width: 100%;
+  height: 400px; /* 画像の高さを統一 */
+  object-fit: cover; /* 画像の縦横比を保ってトリミング */
+  display: block;
+}
+
+/* 説明テキスト */
+.blog-tex {
+  line-height: 1.7;
+}
+
+.blog-tex a{
+  text-decoration: none;
+  color: #0d0d0d;
+}
+
+.blog-tex a:hover {
+   text-decoration: underline;
+   color: #56B7EC;
+ }
+
+ /* お問い合わせセクション全体 */
+ .contact{
+  margin: 100px auto 100px auto;
+}
+
+/* お問い合わせ画像の設定 */
+.contact-form {
+  width: 100%;
+}
+
+.contact-form img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* アクセスセクション全体 */
+ .access{
+  margin: 100px auto 80px auto;
+}
+
+.access iframe {
+   width: 100%;
+   height: 368px;
+   margin-top: 40px;
+ }
+
+ .access-tex{
+  line-height: 1.7;
+ }
+
+ /* フッター全体 */
+footer {
+  text-align: center; /* 要素を中央寄せ */
+  padding: 60px 0 40px 0; /* 上下の余白 */
+}
+
+/* フッター内のロゴ */
+footer .logo {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+footer .logo img {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ナビゲーションリンク */
+.footer-link {
+  margin-bottom: 40px;
+}
+
+.footer-link a {
+  color: #0d0d0d;
+  text-decoration: none;
+  margin: 0 15px; /* 各リンクの左右の余白 */
+  font-size: 15px;
+}
+
+.footer-link a:hover {
+  text-decoration: underline;
+  color: #56B7EC;
+}
+
+/* コピーライト */
+.copyright {
+  font-size: 14px;
+  color: #0d0d0d;
+}
+
+
+/* コンセプトページ用のレイアウト */
+.concept-main {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.concept-main .tit {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.concept-main .tex {
+  max-width: 680px; 
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 2.2; /* 行間をゆったり開ける */
+  text-align: center;
+}
+
+/* PC表示：左側に画像がある行のテキストを右寄りに配置 */
+.concept-col-left {
+  /* 要素の両端揃えにより、余白を中央（画像とテキストの間）に自動で作成 */
+  justify-content: space-between; 
+}
+
+.concept-col-left-r {
+  /* テキストブロック自体の幅を絞るか、左側に余白を作って右へ寄せる */
+  margin-left: auto; /* 右寄せにして間隔を広く確保 */
+  max-width: 520px; 
+}
+
+/* 全体の枠組み */
+.concept-col {
+  max-width: 900px;
+  margin: 60px auto 100px;
+  padding: 0 20px;
+}
+
+/* 左右並びのベース設定 (Flexbox) */
+.concept-col-right,
+.concept-col-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px; /* 各行の上下間隔 */
+}
+
+/* テキスト領域のスタイル */
+.concept-col-right-l,
+.concept-col-left-r {
+  flex: 1;
+}
+
+.concept-col-right-l h3,
+.concept-col-left-r h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0d0d0d;
+  margin-bottom: 15px;
+}
+
+.concept-col-right-l p,
+.concept-col-left-r p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333333;
+}
+
+/* 画像領域のスタイル */
+.concept-col-right-r,
+.concept-col-left-l {
+  width: 260px;
+  height: 260px;
+  flex-shrink: 0;
+}
+
+.concept-col-right-r img,
+.concept-col-left-l img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像の縦横比を崩さず枠いっぱいにトリミング */
+  border-radius: 4px;
+}
+
+/*  スタッフ紹介セクション  */
+
+/* 全体の枠組み */
+.staff {
+  max-width: 850px;
+  margin: 60px auto 100px;
+  padding: 0 20px;
+}
+
+/* 各スタッフのブロック（Flexboxで左右配置） */
+.staff-col {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 70px;
+}
+
+/* 左側：丸形画像エリア */
+.staff-col-left {
+  width: 240px;
+  height: 240px;
+  flex-shrink: 0;
+}
+
+.staff-col-left img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* 正円に切り抜き */
+  object-fit: cover;  /* 正方形以外でも歪まずきれいに表示 */
+}
+
+/* 右側：テキストエリア */
+.staff-col-right {
+  flex: 1;
+}
+
+/* 名前 */
+.staff-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0d0d0d;
+  margin-bottom: 20px;
+}
+
+/* 得意分野・趣味 */
+.staff-skill {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* プロフィール本文 */
+.staff-text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555555;
+}
+
+/* 全体の配置と幅指定 */
+.service {
+  max-width: 850px;
+  margin: 60px auto 100px;
+  padding: 0 20px;
+}
+
+/* セクションタイトル（見出し） */
+.service .tit_01 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  line-height: 1.4;
+}
+
+.service .tit_01 span {
+  font-size: 13px;
+  color: #72c6ef; 
+  letter-spacing: 0.1em;
+}
+
+/* 各診療内容のブロック（横並びレイアウト） */
+.service-col {
+  display: flex;
+  align-items: center;
+  gap: 110px;
+  margin-bottom: 70px;
+}
+
+/* 左側：丸形画像エリア */
+.service-col-left {
+  width: 240px;
+  height: 240px;
+  flex-shrink: 0;
+}
+
+.service-col-left img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* 正円にくり抜き */
+  object-fit: cover;  /* 画像の比率を崩さず収める */
+}
+
+/* 右側：テキストエリア */
+.service-col-right {
+  flex: 1;
+  margin-left: 20px;
+}
+
+/* 診療科目名（一般歯科、小児歯科など） */
+.service-col-right .tit_02 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0d0d0d;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* 特徴・対応内容（太字テキスト） */
+.service-col-right .feature {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* 詳細説明テキスト */
+.service-col-right .tex {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555555;
+}
+
+/* --- ブログ 2カラムレイアウト --- */
+.blog-container {
+  display: flex;
+  gap: 150px;
+  align-items: flex-start;
+}
+
+/* 左側：記事リスト */
+.blog-main {
+  flex: 1;
+  max-width: 680px;
+}
+
+.blog-item {
+  margin-bottom: 60px;
+}
+
+.blog-category {
+  display: inline-block;
+  background-color: #72c6ef;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 3px 10px;
+  margin-bottom: 12px;
+}
+
+.blog-tit {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.blog-tex-01 {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333333;
+}
+
+.blog-tex-01 strong {
+  font-weight: 700;
+}
+
+/* 右側：サイドバー（カテゴリー） */
+.blog-sidebar {
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.blog-category-right {
+  border: 1px solid #dcdcdc;
+  text-align: center;
+}
+
+.blog-category-name {
+  background-color: #dcdcdc;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.blog-category-name-01 {
+  font-size: 13px;
+  padding: 8px 0;
+  border-top: 1px solid #dcdcdc;
+  background-color: #ffffff;
+}
+
+.blog-category-name-01 a {
+  display: block;
+  text-decoration: none;
+  color: #0d0d0d;
+}
+
+/* オンライン予約セクション（appointment）*/
+
+/* セクション全体の余白設定 */
+.appointment {
+  max-width: 900px;
+  margin: 60px auto 100px;
+  padding: 0 20px;
+  text-align: center; /* 子要素（タイトル・画像）を中央寄せ */
+}
+
+/* カレンダー画像の設定 */
+.appointment img {
+  width: 100%;
+  max-width: 887px; /* 画像の選択枠サイズ（887px）に合わせて指定 */
+  height: auto;
+  display: block;
+  margin: 0 auto;  /* 中央配置 */
+  border-radius: 4px; 
+}
+
+/* スマホ用スタイル（画面幅767px以下） */
+@media screen and (max-width: 767px) {
+  body {
+    padding: 0 15px; /* スマホ時の左右余白 */
+  }
+
+  /* PCナビを非表示にしてスマホ用を表示 */
+  .nav-pc {
+    display: none;
+  }
+  .nav-sp {
+    display: block;
+  }
+
+  /* チェックボックス自体は非表示 */
+  .drawer-checkbox {
+    display: none;
+  }
+
+  /* ハンバーガーアイコンのスタイル */
+  .drawer-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .drawer-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #56B7EC;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* スライドメニュー領域 */
+  .drawer-content {
+    position: fixed;
+    top: 0;
+    right: -100%; /* 初期状態は画面外へ退避 */
+    width: 30%;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+    padding-top: 80px;
+    transition: all 0.3s;
+    z-index: 99;
+  }
+
+  .drawer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .drawer-content li a {
+    display: block;
+    padding: 15px 20px;
+    color: #0d0d0d;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+  }
+
+  /* チェックが入ったらメニューをスライドイン */
+  .drawer-checkbox:checked ~ .drawer-content {
+    right: 0;
+  }
+
+  /* チェックが入ったらアイコンを「×」に変形 */
+  .drawer-checkbox:checked ~ .drawer-icon span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  .drawer-checkbox:checked ~ .drawer-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  .drawer-checkbox:checked ~ .drawer-icon span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+
+  .main-visual {
+    height: 300px; 
+    margin-top: 10px;
+  }
+
+  /* その他のスマホ用レイアウト微調整 */
+  .concept-flex,
+  .service-flex,
+  .blog-flex {
+    flex-direction: column;
+  }
+
+  .col-left,
+  .col-right,
+  .service-left,
+  .service-right,
+  .blog-flex-left,
+  .blog-flex-right {
+    width: 100%;
+  }
+
+  .blog-flex {
+    display: flex;
+    flex-direction: column-reverse; /* 上下順を逆にし、画像をテキストの上へ */
+    gap: 20px;
+  }
+
+  .tit_01 {
+    font-size: 24px;
+  }
+
+  .tit {
+    font-size: 20px;
+  }
+
+
+  /* コンセプトサイト */
+  .concept-main .tit {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .concept-main .tex {
+    font-size: 14px;
+    line-height: 1.9;
+    text-align: left; 
+  }
+
+  .concept-col {
+    margin: 40px auto 60px;
+  }
+
+  /* 画像が左にあるブロック（.concept-col-left）の順番調整 */
+  .concept-col-left {
+    /* column に設定することで HTML通りの並び順（画像が上、テキストが下）になります */
+    flex-direction: column; 
+    gap: 20px;
+  }
+
+  /* 画像が右にあるブロック（.concept-col-right）の順番調整 */
+  .concept-col-right {
+    /* column-reverse に設定することで上下を逆にし（画像が上、テキストが下）にします */
+    flex-direction: column-reverse; 
+    gap: 20px;
+  }
+
+  /* スマホ時の余白リセット */
+  .concept-col-left-r {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .concept-col-right-r,
+  .concept-col-left-l {
+    width: 100%;
+    height: 220px;
+  }
+
+  .staff-col {
+    flex-direction: column; /* 縦並びに切り替え */
+    gap: 25px;
+    margin-bottom: 60px;
+    text-align: center; /* スマホ時は中央寄せ */
+  }
+
+  .staff-col-left {
+    width: 180px;
+    height: 180px;
+  }
+
+  .staff-name {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .staff-skill {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .staff-text {
+    text-align: left; /* 本文は左寄せが見やすい */
+  }
+
+  .service-col {
+    flex-direction: column; /* 縦並びに切り替え */
+    gap: 25px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .service-col-left {
+    width: 200px;
+    height: 200px;
+  }
+
+  .service-col-right .tit_02 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .service-col-right .feature {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .service-col-right .tex {
+    text-align: left; /* 本文は左寄せで読みやすく */
+  }
+
+  .blog-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .blog-main {
+    max-width: 100%; /* スマホ時は横幅いっぱいに拡大 */
+  }
+
+  /* スマホでのテキスト・タイトルサイズ調整 */
+  .blog-item {
+    margin-bottom: 40px;
+  }
+
+  .blog-category {
+    font-size: 12px;
+    padding: 2px 8px;
+  }
+
+  .blog-tit {
+    font-size: 17px; 
+    margin-bottom: 12px;
+  }
+
+  .blog-tex-01 {
+    font-size: 13.5px; /* スマホで読みやすい少し小さめの文字サイズ */
+    line-height: 1.7;
+  }
+
+  .blog-sidebar {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .appointment {
+    margin: 40px auto 60px;
+  }
+
+  
+}
